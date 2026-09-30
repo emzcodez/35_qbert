@@ -9,40 +9,28 @@ CELLS = {(r, c) for r in range(ROWS) for c in range(r + 1)}
 DEFAULT_PALETTE = [(90, 160, 220), (190, 120, 70), (100, 210, 140)]
 KEY_HOPS = {pygame.K_LEFT: (-1, -1), pygame.K_UP: (-1, 0), pygame.K_DOWN: (1, 0), pygame.K_RIGHT: (1, 1)}
 
-def cube_palette(level):
-    palettes = {
-        1: [
-            (90, 160, 220),
-            (130, 190, 240),
-            (180, 220, 255)
-        ],
-        2: [
-            (190, 120, 70),
-            (220, 160, 100),
-            (255, 200, 130)
-        ],
-        3: [
-            (100, 210, 140),
-            (140, 230, 170),
-            (180, 250, 200)
-        ]
-    }
 
-    return palettes.get(level)
+def cube_palette(level):
+    """Return a list of TARGET + 1 (r, g, b) colours for the cube stages, or None for the default."""
+    pass
+
 
 def on_cube_completed(cell):
-    print(f"Cube {cell} completed!")
+    """Called when a cube first reaches its target colour; add a flash, sound, or bonus here."""
+    pass
 
 
 def bonus_life_threshold():
-    return 1000
+    """Return a score value at which the player earns an extra life, or None to disable bonus lives."""
+    pass
 
 
 def cube_center(row, col):
     return pygame.Vector2(
-        WIDTH / 2 + (col - row / 2) * CUBE_W,
+        WIDTH / 2 + (col - row // 2) * CUBE_W,
         90 + row * CUBE_H
     )
+
 
 def neighbors(row, col):
     return [(row - 1, col - 1), (row - 1, col), (row + 1, col), (row + 1, col + 1)]
