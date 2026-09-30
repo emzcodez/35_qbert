@@ -17,7 +17,8 @@ Falling off the edge of the pyramid (or bumping an enemy while grounded) costs a
 Levels, lives, and scoring, with a win once every cube reaches its target color
 It has one deliberate bug and three optional features left as empty functions. You are expected to analyze, interact with an AI assistant, and complete/fix the game to make it fully functional and more interesting.
 
-LLM used:
+LLM used: ChatGPT
+Link: https://chatgpt.com/share/6abd4487-73ac-83ee-b1c1-fa88beac9a22
 
 Getting Started
 Setup
