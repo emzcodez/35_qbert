@@ -1,4 +1,7 @@
-Q*bert Repair Lab
+**Q*bert Repair Lab**
+NAME: PREMA P KOTUR
+SRN: PES1UG24CS343
+SECTION: F
 This project is a single-file Q*bert-lite clone using Pygame. It introduces students to isometric projection, diagonal hop validation, and enemy chase behavior using a small, readable object-oriented codebase.
 
 What's Provided
