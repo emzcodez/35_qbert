@@ -11,13 +11,28 @@ KEY_HOPS = {pygame.K_LEFT: (-1, -1), pygame.K_UP: (-1, 0), pygame.K_DOWN: (1, 0)
 
 
 def cube_palette(level):
-    """Return a list of TARGET + 1 (r, g, b) colours for the cube stages, or None for the default."""
-    pass
+    palettes = {
+        1: [
+            (90, 160, 220),    # unpainted
+            (130, 190, 240),   # stage 1
+            (180, 220, 255)    # fully painted
+        ],
+        2: [
+            (190, 120, 70),
+            (220, 160, 100),
+            (255, 200, 130)
+        ],
+        3: [
+            (100, 210, 140),
+            (140, 230, 170),
+            (180, 250, 200)
+        ]
+    }
 
+    return palettes.get(level)
 
 def on_cube_completed(cell):
-    """Called when a cube first reaches its target colour; add a flash, sound, or bonus here."""
-    pass
+    print(f"Cube {cell} completed!")
 
 
 def bonus_life_threshold():
