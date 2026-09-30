@@ -1,0 +1,10 @@
+
+Software
+
+Python 3.10 or newer
+
+Pygame
+
+Install Pygame
+
+pip install pygame
